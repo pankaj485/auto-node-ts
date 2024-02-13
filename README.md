@@ -24,7 +24,7 @@ Simple bash script to automate scaffolding (installation of [ts-express-starter]
       > `~/.bashrc` for bash or `~/.zshrc` for z-shell
 
       ```shell
-      alias auto-node-ts="bash ./node-ts-setup.bash"
+      alias auto-node-ts="bash <absolute path to node-ts-setup.bash from /home>"
       ```
 
    2. Load the shell source file
