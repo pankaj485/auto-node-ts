@@ -14,12 +14,18 @@ mv $GIT_WORK_DIR $USR_WORK_DIR
 
 cd $USR_WORK_DIR
 
-echo "::::::::::::::::: Removing git tracking  :::::::::::::::::"
+echo "::::::::::::::::: Setting up git :::::::::::::::::"
+# remove existing git configuration coming from repository and creating new configuration
 rm -rf .git
-rm .gitignore
+git init -b main
+
+# creating new commit from the fresh git initialization
+git add .
+git commit -m "initial commit"
 
 echo ":::::::::::::::::  installing dependencies  :::::::::::::::::"
 npm install
 
 echo ":::::::::::::::::  Project setup successfully  :::::::::::::::::"
 echo ":::::::::::::::::  pleae refer package.json file for more info  :::::::::::::::::"
+
